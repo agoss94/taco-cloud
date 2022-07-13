@@ -1,5 +1,6 @@
 package tacos;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,10 @@ public class TacoOrder {
 
 	@Digits(integer = 3, fraction = 0, message = "Invalid CVV")
 	private String ccCVV;
+
+	private long id;
+
+	private Date placedAt;
 
 	private List<Taco> tacos = new ArrayList<>();
 
@@ -112,4 +117,21 @@ public class TacoOrder {
 	public void setTacos(List<Taco> tacos) {
 		this.tacos = tacos;
 	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public Date getPlacedAt() {
+		return placedAt;
+	}
+
+	public void setPlacedAt(Date placedAt) {
+		this.placedAt = placedAt;
+	}
+
 }
